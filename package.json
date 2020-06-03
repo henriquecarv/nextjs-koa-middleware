@@ -1,0 +1,53 @@
+{
+  "name": "nextjs-koa-middleware",
+  "version": "1.0.0",
+  "description": "NextJS koa middleware",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "private": false,
+  "scripts": {
+    "prebuild": "rm -rf dist/",
+    "build": "tsc --project tsconfig.json",
+    "type-check": "tsc --pretty --noEmit",
+    "format": "prettier --write **/*.{js,ts}",
+    "lint": "eslint . --ext ts --ext tsx --ext js",
+    "prepublishOnly": "yarn build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://henriquecarv@github.com/henriquecarv/nextjs-koa-middleware.git"
+  },
+  "author": "Henrique Carvalho da Cruz <henriquecarv.cruz@gmail.com> (https://henriquecarv.com)",
+  "license": "MIT",
+  "homepage": "https://github.com/henriquecarv/nextjs-koa-middleware#readme",
+  "bugs": "https://github.com/henriquecarv/nextjs-koa-middleware/issues",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "koa": "^2.12.0",
+    "next": "^9.4.4"
+  },
+  "peerDependencies": {
+    "koa-router": "^8.0.8",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
+  },
+  "devDependencies": {
+    "@types/koa": "^2.11.3",
+    "@types/node": "^14.0.9",
+    "@types/react": "^16.9.35",
+    "@types/react-dom": "16.9.8",
+    "@typescript-eslint/eslint-plugin": "^3.1.0",
+    "@typescript-eslint/parser": "^3.1.0",
+    "eslint": "^7.1.0",
+    "eslint-config-prettier": "^6.11.0",
+    "husky": "^4.2.5",
+    "lint-staged": "^10.2.7",
+    "prettier": "^2.0.5",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "typescript": "^3.9.3"
+  },
+  "engines": {
+    "node": ">=12"
+  }
+}

@@ -1,0 +1,11 @@
+node_modules/
+.env
+.env.example
+.eslintignore
+.eslintrc.json
+.gitignore
+.huskyrc
+.prettierignore
+.prettierrc
+README.md
+tsconfig.json
