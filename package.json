@@ -17,6 +17,14 @@
     "type": "git",
     "url": "git+https://henriquecarv@github.com/henriquecarv/nextjs-koa-middleware.git"
   },
+  "keywords": [
+    "nextjs",
+    "koa",
+    "middleware",
+    "henriquecarv",
+    "koa-router",
+    "typescript"
+  ],
   "author": "Henrique Carvalho da Cruz <henriquecarv.cruz@gmail.com> (https://henriquecarv.com)",
   "license": "MIT",
   "homepage": "https://github.com/henriquecarv/nextjs-koa-middleware#readme",
