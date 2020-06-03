@@ -26,7 +26,7 @@ yarn add nextjs-koa-middleware
 
 ## Usage
 
-- Define environment variables in .env file:
+- Define environment variables:
 
 ```sh
 NODE_ENV=development

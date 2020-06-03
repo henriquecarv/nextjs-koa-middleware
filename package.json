@@ -30,7 +30,6 @@
   "homepage": "https://github.com/henriquecarv/nextjs-koa-middleware#readme",
   "bugs": "https://github.com/henriquecarv/nextjs-koa-middleware/issues",
   "dependencies": {
-    "dotenv": "^8.2.0",
     "koa": "^2.12.0",
     "next": "^9.4.4"
   },

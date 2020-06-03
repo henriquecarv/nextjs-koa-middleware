@@ -1,0 +1,39 @@
+version: 2.1
+
+jobs:
+  build:
+    working_directory: ~/workspace
+    docker:
+      - image: circleci/node:lts
+    environment:
+      CI: 'true'
+    steps:
+      - checkout
+      - restore_cache:
+          name: Restore Yarn Package Cache
+          keys:
+            - yarn-packages-{{ checksum "yarn.lock" }}
+      - run:
+          name: Install dependencies
+          command: yarn install --frozen-lockfile
+      - save_cache:
+          name: Save Yarn Package Cache
+          key: yarn-packages-{{ checksum "yarn.lock" }}
+          paths:
+            - ~/.cache/yarn
+      - run:
+          name: linting
+          command: yarn lint
+      - run:
+          name: typecheck
+          command: yarn type-check
+      - run:
+          name: build
+          command: yarn build
+
+workflows:
+  version: 2
+
+  workflow:
+    jobs:
+      - build

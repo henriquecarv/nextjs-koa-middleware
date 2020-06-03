@@ -1,5 +1,7 @@
 node_modules/
 lib/
+.circleci/
+.git/
 .env
 .env.example
 .eslintignore
