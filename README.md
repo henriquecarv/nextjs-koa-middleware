@@ -2,6 +2,7 @@
 
 NextJS koa middleware
 
+[![CircleCI](https://img.shields.io/circleci/build/github/henriquecarv/nextjs-koa-middleware?token=678134f59ded57d800e7b52d0e2d22a0852f30bc)](https://circleci.com/gh/henriquecarv/nextjs-koa-middleware)
 [![npm](https://img.shields.io/npm/v/nextjs-koa-middleware.svg)](https://www.npmjs.com/package/nextjs-koa-middleware)
 [![npm](https://img.shields.io/npm/dt/nextjs-koa-middleware.svg)](https://www.npmjs.com/package/nextjs-koa-middleware)
 [![LICENSE](https://img.shields.io/github/license/henriquecarv/nextjs-koa-middleware.svg)](./LICENSE)
