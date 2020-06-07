@@ -2,6 +2,7 @@
 
 NextJS koa middleware
 
+[![Codacy Badge](https://app.codacy.com/project/badge/Grade/cb4e12e4cefe4fb3aa1413ebcbf4261d)](https://www.codacy.com/manual/henriquecarv/nextjs-koa-middleware?utm_source=github.com&utm_medium=referral&utm_content=henriquecarv/nextjs-koa-middleware&utm_campaign=Badge_Grade)
 [![CircleCI](https://img.shields.io/circleci/build/github/henriquecarv/nextjs-koa-middleware?token=678134f59ded57d800e7b52d0e2d22a0852f30bc)](https://circleci.com/gh/henriquecarv/nextjs-koa-middleware)
 [![npm](https://img.shields.io/npm/v/nextjs-koa-middleware.svg)](https://www.npmjs.com/package/nextjs-koa-middleware)
 [![npm](https://img.shields.io/npm/dt/nextjs-koa-middleware.svg)](https://www.npmjs.com/package/nextjs-koa-middleware)
@@ -40,17 +41,35 @@ NEXT_CONFIG_PATH=/next.config.js
 - Define NextJS Routes:
 
 ```typescript
-import Router from 'koa-router'
-import { handle, render, defaultReturn } from 'nextjs-koa-middleware'
+import Router from 'koa-router';
+import { handle, render, defaultReturn } from 'nextjs-koa-middleware';
 
-const nextRouter = new Router()
+const nextRouter = new Router();
 
-nextRouter.use(defaultReturn())
-nextRouter.get('/custom-path', render('pageComponentName'))
-nextRouter.all('*', handleRoutes())
+nextRouter.use(defaultReturn());
+nextRouter.get('/PagePath', render('pageComponentName'));
+nextRouter.all('*', handleRoutes());
 
-export default nextRouter
+export default nextRouter;
 ```
+
+- Start koa server:
+
+```typescript
+import koa from 'koa';
+import nextRouter from './NextRouter';
+
+const app = new Koa();
+const port = process.env.PORT ?? 3000;
+const host = process.env.HOST ?? 'localhost';
+
+app.use(nextRouter.routes()).use(nextRouter.allowedMethods());
+app.listen(port);
+
+console.info(`listening on ${host}:${port}`);
+```
+
+- [Example Project](https://github.com/henriquecarv/bundle-size)
 
 ### License
 
