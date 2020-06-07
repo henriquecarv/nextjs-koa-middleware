@@ -37,41 +37,19 @@ NEXT_CLIENT_DIR=/
 NEXT_CONFIG_PATH=/next.config.js
 ```
 
-- Use the [deafultReturn()](./lib/middlewares/defaultReturn.ts) as early as possible after starting a koa instance:
-
-```typescript
-import koa from 'koa'
-import { defaultReturn } from 'nextjs-koa-middleware'
-
-const app = new koa()
-
-app.use(defaultReturn())
-```
-
-- Default NextJS Routes:
+- Define NextJS Routes:
 
 ```typescript
 import Router from 'koa-router'
-import { handleRoutes } from 'nextjs-koa-middleware'
+import { handle, render, defaultReturn } from 'nextjs-koa-middleware'
 
 const nextRouter = new Router()
 
+nextRouter.use(defaultReturn())
+nextRouter.get('/custom-path', render('pageComponentName'))
 nextRouter.all('*', handleRoutes())
 
 export default nextRouter
-```
-
-- Custom NextJS Routes:
-
-```typescript
-import Router from 'koa-router'
-import { render } from 'nextjs-koa-middleware'
-
-const customRoute = new Router()
-
-customRoute.get('/custom-path', render('pageComponentName'))
-
-export default customRoute
 ```
 
 ### License

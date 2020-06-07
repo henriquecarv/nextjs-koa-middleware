@@ -1,5 +1,6 @@
-import defaultReturn from './middlewares/defaultReturn'
-import handleRoutes from './middlewares/handleRoutes'
-import render from './middlewares/render'
+import defaultReturn from './middlewares/defaultReturn';
+import NextMiddleware, { handle, render } from './middlewares/next';
 
-export { defaultReturn, handleRoutes, render }
+export default NextMiddleware;
+
+export { defaultReturn, handle, render };

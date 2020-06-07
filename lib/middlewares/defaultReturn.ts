@@ -1,6 +1,6 @@
-import { Context, Next } from 'koa'
+import { Context, Next } from 'koa';
 
 export default () => async (ctx: Context, next: Next) => {
-  ctx.res.statusCode = 200
-  await next()
-}
+  ctx.res.statusCode = 200;
+  await next();
+};
