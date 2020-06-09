@@ -1,18 +1,29 @@
 import next from 'next';
-import { dev, nextClientDir, nextConfig } from '../config/variables';
-import Server from 'next/dist/next-server/server/next-server';
+import { dev as isDev, nextClientDir, nextConfig } from '../config/variables';
+import Server, {
+  ServerConstructor,
+} from 'next/dist/next-server/server/next-server';
 import { Context } from 'koa';
+
+declare type NextServerConstructor = Omit<ServerConstructor, 'staticMarkup'> & {
+  /**
+   * Whether to launch Next.js in dev mode - @default false
+   */
+  dev?: boolean;
+};
 
 class NextMiddleware {
   private app: Server;
 
-  constructor(app?: Server, isDev?: boolean, conf?: any, clientDir?: string) {
+  constructor(app?: Server, options?: Partial<NextServerConstructor>) {
+    const { dev = isDev, conf = nextConfig, dir = nextClientDir } =
+      options ?? {};
     this.app =
       app ??
       next({
-        dev: isDev ?? dev,
-        conf: conf ?? nextConfig,
-        dir: clientDir ?? nextClientDir,
+        dev,
+        conf,
+        dir,
       });
     this.init();
   }
