@@ -30,7 +30,7 @@
   "homepage": "https://github.com/henriquecarv/nextjs-koa-middleware#readme",
   "bugs": "https://github.com/henriquecarv/nextjs-koa-middleware/issues",
   "dependencies": {
-    "koa": "^2.12.0",
+    "koa": "^2.12.1",
     "next": "^9.4.4"
   },
   "peerDependencies": {
@@ -40,15 +40,15 @@
   },
   "devDependencies": {
     "@types/koa": "^2.11.3",
-    "@types/node": "^14.0.12",
-    "@types/react": "^16.9.35",
+    "@types/node": "^14.0.13",
+    "@types/react": "^16.9.38",
     "@types/react-dom": "16.9.8",
-    "@typescript-eslint/eslint-plugin": "^3.2.0",
-    "@typescript-eslint/parser": "^3.2.0",
+    "@typescript-eslint/eslint-plugin": "^3.3.0",
+    "@typescript-eslint/parser": "^3.3.0",
     "eslint": "^7.2.0",
     "eslint-config-prettier": "^6.11.0",
     "husky": "^4.2.5",
-    "lint-staged": "^10.2.9",
+    "lint-staged": "^10.2.11",
     "prettier": "^2.0.5",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
