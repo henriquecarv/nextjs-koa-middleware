@@ -31,7 +31,7 @@
   "bugs": "https://github.com/henriquecarv/nextjs-koa-middleware/issues",
   "dependencies": {
     "koa": "^2.13.0",
-    "next": "^9.5.1"
+    "next": "^11.1.3"
   },
   "peerDependencies": {
     "koa-router": "^8.0.8",
